@@ -1,16 +1,23 @@
+import React, { Component } from 'react';
 import './App.css';
-import BannerComponent from './components/BannerComponent';
-import ExhibitComponent from './components/ExhibitComponent';
+import Banner from './Banner';
+import Exhibit from './Exhibit';
+import AddressDisplay from './AddressDisplay';
 
-function App() {
-  return (
-    <div className="App">
-      <BannerComponent />
-      <ExhibitComponent>
-        <p>content of the exhibit</p>
-      </ExhibitComponent>
-    </div>
-  );
+class App extends Component {
+    render() {
+        return (
+            <div className="App">
+                <Banner bannerText="Sextant" />
+                <Exhibit name="Public IPv4 Address">
+                    <AddressDisplay url='https://api.ipify.org?format=json' />
+                </Exhibit>
+                <Exhibit name="Public IPv6 Address">
+                    <AddressDisplay url='https://api64.ipify.org?format=json' />
+                </Exhibit>
+            </div>
+        );
+    }
 }
 
 export default App;
