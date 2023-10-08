@@ -1,0 +1,15 @@
+.App {
+  text-align: center;
+}
+
+.banner{
+  background-color: #B86F52;
+  color:aliceblue;
+  padding: 0;
+  margin: auto;
+}
+
+.exhibit{
+  background-color: #f5ebe0;
+  padding-top:10;
+}
